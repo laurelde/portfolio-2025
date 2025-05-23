@@ -1,0 +1,98 @@
+@use "@material/button/styles";
+@use "variables" as v;
+
+
+.fc-button.mdc-button {
+  // --mdc-theme-primary: v.$dark-brown;
+  // --mdc-theme-on-primary: v.$light-brown; 
+  --mdc-theme-primary: #a45b37;
+  --mdc-theme-on-primary: #fffdf9; 
+  --mdc-outlined-button-outline-color: v.$dark-brown;
+  border-radius: 0;
+
+  .mdc-button__ripple {
+    border-radius: 0;
+  }
+
+  &.mdc-button--raised,
+  &.mdc-button--outlined {
+    border-radius: 0;
+  }
+
+  .mdc-button--outlined {
+    // border-color: v.$dark-brown;;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.btn__toggle-group--selected {
+  visibility: visible;
+}
+
+button:not(.btn__toggle-group--selected) {
+  .material-symbols-outlined {
+    visibility: hidden;
+  }
+}
+
+.material-symbols-outlined {
+  font-size: 18px;
+  position: absolute;
+
+  &.flipped {
+    rotate:calc(180deg);
+  }
+
+
+}
+
+.btn__toggle-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 !important;
+
+  .form--label {
+    margin-right: 10px;
+  }
+
+  .btn__toggle-group__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid v.$dark-brown;
+  
+    .mdc-button {
+      padding: 0 20px;
+      margin:0; 
+  
+      &.mdc-button--raised .mdc-button__label {
+        padding-right: 10px;
+      }
+    }
+  }
+
+}
+
+.btn__toggle-group .mdc-touch-target-wrapper:not(:last-child) .mdc-button--outlined {
+  border-right: 1px solid brown;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.btn__toggle-group .mdc-touch-target-wrapper:last-child .mdc-button--outlined {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.mdc-touch-target-wrapper {
+  margin-left: -1px;
+}

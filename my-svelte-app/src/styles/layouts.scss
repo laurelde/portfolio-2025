@@ -1,0 +1,202 @@
+@use "variables" as v;
+@use "mixins" as *;
+
+body {
+  background-color: v.$medium-brown;
+  color: v.$black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include screen-xs {
+    padding: 0;
+  }
+
+  @include screen-m {
+    padding: 0 10vw;
+  }
+
+  @include screen-l {
+    padding: 0 20vw;
+  }
+}
+.grid-4-col {
+  display: grid;
+  flex-direction: row;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  width: 100%;
+  margin: auto;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+}
+
+.aside-filters  {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (min-width: 900px)  {
+    grid-template-columns: 1fr;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  > * {
+    margin: 5px;
+  }
+}
+
+aside  {
+  padding: 5px 10px;
+  margin-top: 30px;
+
+  @media only screen and (min-width: 900px)  {
+    position: absolute;
+    height: auto;
+    width: 250px;
+    box-sizing: border-box;
+  }
+
+  h2, h3 {
+    margin: 0 5px
+  }
+
+  .align-center {
+    margin: 0 5px;
+    justify-content: center;
+    display: flex;
+  }   
+}
+
+.browse.main {
+  margin: 0 20px 20px 20px;
+  padding: 10px;
+
+  @media only screen and (min-width: 900px) {
+    margin-left: 245px;
+    margin-right: 20px;
+  }
+}
+
+.favorites.main {
+  margin: 0 20px 20px 20px;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  > * {
+    margin: 10px;
+  }
+
+  &.align-right {
+    justify-content: flex-end;
+  }
+
+  &.sort {
+    justify-content: space-between;
+  }
+}
+
+header {
+  padding: 0 20px;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 6;
+
+  .mdc-touch-target-wrapper {
+    margin: 0;
+  }
+
+  .mdc-button {
+    padding: 30px 10px;
+    margin: 0;
+    border-bottom: 1px solid white;
+  }
+
+  .mdc-button:hover {
+    border-bottom: 1px solid 
+  }
+}
+
+#login {
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  padding-top: 20vh;
+  position: absolute;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: v.$medium-brown;
+  background-image: url('../assets/dogs-horizontal.jpg');
+
+  > div {
+    background-color: v.$white;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    padding: 30px 10px;
+    margin: 0;
+    background: v.$white;
+  }
+
+  .mdc-text-field {
+    margin-top: 18px;
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  padding: 30px 20px;
+  margin: 0;
+  background: v.$medium-brown;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.match {
+  max-width: 350px;
+  margin: auto;
+}

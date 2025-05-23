@@ -1,0 +1,91 @@
+@use "@material/card";
+@use "variables" as v;
+
+@include card.core-styles;
+
+.mdc-card {
+  border-radius: 0;
+  border: 1px solid v.$medium-brown;
+
+  &:hover {
+    border: 2px solid v.$medium-brown;
+  }
+
+  &__img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  &__media {
+    max-height: 100%;
+    background: #e5dac4;
+  }
+
+  &__media-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .material-icons,
+  .material-icons-outlined {
+    position: absolute;
+    right: 22px;
+  }
+
+  .info-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+
+    dl {
+      margin-top: 0;
+    }
+
+    dt {
+      text-align: right;
+    }
+  
+    dd {
+      text-align: left;
+      margin-left:0;
+    }
+  }
+
+  h3 {
+    background-color: v.$dark-brown;
+    margin: 0;
+    padding: 10px;
+    color: white;
+  }
+
+  &.shimmer {
+    background: linear-gradient(120deg, #e5dac4 25%, #f2e8d9 37%, #e5dac4 100%);
+    background-size: 400% 400%;
+    animation: shimmer 3s infinite;
+    height: 400px;
+  }
+
+  @keyframes diagonal-shimmer { 
+    
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;
+    }
+  }
+}
+
+.hero.hero-landing {
+  background: linear-gradient(120deg, #e5dac4 25%, #f2e8d9 37%, #e5dac4 100%);
+  background-size: 400% 400%;
+  animation: diagonal-shimmer 3s infinite;
+  height: 400px;
+}

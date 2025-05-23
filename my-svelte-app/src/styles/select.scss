@@ -1,0 +1,23 @@
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/styles";
+@use "variables" as v;
+
+.mdc-select {
+  --mdc-theme-primary: #a45b37;
+  --mdc-theme-on-primary: #fffdf9; 
+  --mdc-shape-small: 0;
+
+  &__selected-text {
+    margin-left: 14px;
+  }
+}
+
+.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+  color: v.$dark-brown;
+}
+
+.mdc-notched-outline__leading {
+  width: 10px !important;
+}

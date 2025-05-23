@@ -1,0 +1,29 @@
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "variables" as v;
+@include textfield.core-styles;
+
+.mdc-text-field {
+  --mdc-theme-primary: #a45b37;
+  --mdc-theme-on-primary: #fffdf9; 
+  --mdc-shape-small: 0;
+
+  .mdc-text-field__input {
+    padding: 0 14px;
+  }
+
+  &--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: v.$dark-brown;
+  }
+}
+
+.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+  color: v.$dark-brown;
+}
+
+.mdc-notched-outline__leading {
+  width: 10px !important;
+}
+
