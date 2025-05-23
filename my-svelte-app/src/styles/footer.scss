@@ -1,0 +1,34 @@
+@use "variables" as v;
+@use "mixins" as *;
+
+footer {
+  .icon--social-media {
+    svg {
+      color: v.$black
+    }
+    
+    a {
+      font-size: 14px;
+      width: 24px;
+      display: flex;
+      padding: 10px;
+      margin: 5px;
+      }
+  }
+
+  ul {
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    @include screen-m {
+      flex-direction: column;
+    }
+  }
+
+  @include screen-m {
+    // position: absolute;
+    // left: 2vw;
+  }
+}

@@ -7,18 +7,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-
-  @include screen-xs {
-    padding: 0;
-  }
-
-  @include screen-m {
-    padding: 0 10vw;
-  }
-
-  @include screen-l {
-    padding: 0 20vw;
-  }
 }
 .grid-4-col {
   display: grid;
@@ -78,13 +66,6 @@ aside  {
   padding: 5px 10px;
   margin-top: 30px;
 
-  @media only screen and (min-width: 900px)  {
-    position: absolute;
-    height: auto;
-    width: 250px;
-    box-sizing: border-box;
-  }
-
   h2, h3 {
     margin: 0 5px
   }
@@ -96,13 +77,9 @@ aside  {
   }   
 }
 
-.browse.main {
-  margin: 0 20px 20px 20px;
-  padding: 10px;
-
-  @media only screen and (min-width: 900px) {
-    margin-left: 245px;
-    margin-right: 20px;
+main {
+  @include screen-m {
+    width: 60vw;
   }
 }
 
@@ -154,42 +131,14 @@ header {
   }
 }
 
-#login {
-  width: 100vw;
-  margin: auto;
-  text-align: center;
-  padding-top: 20vh;
-  position: absolute;
-  height: 100vh;
-  box-sizing: border-box;
-  background-color: v.$medium-brown;
-  background-image: url('../assets/dogs-horizontal.jpg');
-
-  > div {
-    background-color: v.$white;
-    padding: 20px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-  }
-
-  h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-    padding: 30px 10px;
-    margin: 0;
-    background: v.$white;
-  }
-
-  .mdc-text-field {
-    margin-top: 18px;
-  }
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  padding: 30px 20px;
   margin: 0;
-  background: v.$medium-brown;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h3 {
@@ -199,4 +148,29 @@ h3 {
 .match {
   max-width: 350px;
   margin: auto;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: auto;
+  max-width: 1200px;
+
+  @include screen-m {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+    margin: auto;
+    max-width: 100%;
+  }
+}
+
+.layout-column {
+  @include screen-m {
+    width: 20vw;
+  }
 }

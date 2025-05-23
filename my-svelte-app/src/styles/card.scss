@@ -3,6 +3,10 @@
 
 @include card.core-styles;
 
+.hero.hero--landing {
+  text-align: left;
+}
+
 .mdc-card {
   border-radius: 0;
   border: 1px solid v.$medium-brown;
@@ -84,8 +88,5 @@
 }
 
 .hero.hero-landing {
-  background: linear-gradient(120deg, #e5dac4 25%, #f2e8d9 37%, #e5dac4 100%);
-  background-size: 400% 400%;
-  animation: diagonal-shimmer 3s infinite;
-  height: 400px;
+  text-align: left;
 }
