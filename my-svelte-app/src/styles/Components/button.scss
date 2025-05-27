@@ -1,5 +1,5 @@
 
-@use "variables" as v;
+@use "../Shared/variables" as v;
 @use "@material/theme" with (
   $primary: #3a154c,
   $secondary: #ceb3f4,

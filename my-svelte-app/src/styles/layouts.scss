@@ -1,12 +1,13 @@
-@use "variables" as v;
-@use "mixins" as *;
+@use "./Shared/variables" as v;
+@use "./Shared/mixins" as *;
 
 body {
-  background-color: v.$medium-purple;
+  background-color: v.$light-purple;
   color: v.$black;
   font-family: 'Inter+Tight', sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  margin: 0;
 }
 .grid-4-col {
   display: grid;
@@ -78,8 +79,14 @@ aside  {
 }
 
 main {
+  width: 90vw;
+
   @include screen-m {
-    width: 60vw;
+    width: 80vw;
+  }
+
+  @include screen-l {
+    width: 70vw;
   }
 }
 
@@ -131,20 +138,6 @@ header {
   }
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin: 0;
-  font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h3 {
-  font-weight: 400;
-}
-
 .match {
   max-width: 350px;
   margin: auto;
@@ -160,8 +153,8 @@ h3 {
   max-width: 1200px;
 
   @include screen-m {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: stretch;
     padding: 0;
     margin: auto;
@@ -171,6 +164,8 @@ h3 {
 
 .layout-column {
   @include screen-m {
-    width: 20vw;
+    position: fixed;
+    left: 2vw;
+    bottom: 50px;
   }
 }

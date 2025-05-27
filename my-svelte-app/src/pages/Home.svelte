@@ -3,15 +3,17 @@
   import Header from "../components/Layout/Header.svelte";
   import Hero from "../components/Cards/Hero.svelte";
   import Footer from "./Footer.svelte";
+  import About from "./Sections/About.svelte";
+  import "../styles/layouts.scss";
 
   onMount(async () => {});
 </script>
 
 <Header></Header>
 <div class="main-layout">
-  <aside class="layout-column">Reach Out!</aside>
   <main>
     <Hero />
+    <About />
   </main>
   <Footer></Footer>
 </div>

@@ -1,23 +1,23 @@
 <script lang="ts">
-  import { run } from 'svelte/legacy';
+  import { run } from "svelte/legacy";
 
   import { createEventDispatcher } from "svelte";
   import { MDCDialog } from "@material/dialog";
   import { onMount, onDestroy } from "svelte";
-  import "../../styles/dialog.scss";
+  import "../../styles/Components/dialog.scss";
 
   interface Props {
     id?: string;
     open?: boolean;
     title?: string;
-    contentSlot?: import('svelte').Snippet;
+    contentSlot?: import("svelte").Snippet;
   }
 
   let {
     id = "",
     open = $bindable(false),
     title = "",
-    contentSlot
+    contentSlot,
   }: Props = $props();
 
   let dialog = $state(null);

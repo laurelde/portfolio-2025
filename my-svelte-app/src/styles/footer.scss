@@ -1,5 +1,5 @@
-@use "variables" as v;
-@use "mixins" as *;
+@use "./Shared/variables" as v;
+@use "./Shared/mixins" as *;
 
 footer {
   .icon--social-media {

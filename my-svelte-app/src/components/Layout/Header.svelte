@@ -5,9 +5,12 @@
 
 <header>
   <div class="row align-right">
-    <LinkButton theme="" href="/#/Browse" label="Browse"></LinkButton>
-    <LinkButton theme="" href="/#/Favorites" label="Favorites"></LinkButton>
-    <LinkButton theme="" href="/#/Login" label="Logout" on:click={logout}
+    <LinkButton theme="" href="/#/About" label="About"></LinkButton>
+    <LinkButton theme="" href="/#/Work" label="Work"></LinkButton>
+    <LinkButton
+      theme="mdc-button--raised mdc-button--touch"
+      href="/#/Contact"
+      label="Connect"
     ></LinkButton>
   </div>
 </header>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { MDCSelect } from "@material/select";
   import { onMount, createEventDispatcher } from "svelte";
-  import "../../styles/select.scss";
+  import "../../styles/Components/select.scss";
 
   interface Props {
     options?: any;
@@ -14,7 +14,7 @@
     options = [],
     label = "",
     id = "",
-    selectedId = $bindable(null)
+    selectedId = $bindable(null),
   }: Props = $props();
 
   const dispatch = createEventDispatcher();

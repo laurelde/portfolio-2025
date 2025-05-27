@@ -1,14 +1,14 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from "svelte";
   import { MDCRipple } from "@material/ripple";
-  import "../../styles/card.scss";
+  import "../../styles/Components/card.scss";
 
   interface Props {
     title?: string;
     imgSrc?: any;
     id?: any;
     favorite?: boolean;
-    descriptionSlot?: import('svelte').Snippet;
+    descriptionSlot?: import("svelte").Snippet;
   }
 
   let {
@@ -16,7 +16,7 @@
     imgSrc = null,
     id = null,
     favorite = $bindable(false),
-    descriptionSlot
+    descriptionSlot,
   }: Props = $props();
 
   const dispatch = createEventDispatcher();

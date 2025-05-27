@@ -2,7 +2,7 @@
 @use "@material/line-ripple/mdc-line-ripple";
 @use "@material/notched-outline/mdc-notched-outline";
 @use "@material/textfield";
-@use "variables" as v;
+@use "../Shared/variables" as v;
 @include textfield.core-styles;
 
 .mdc-text-field {

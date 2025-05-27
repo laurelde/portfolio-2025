@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "../../styles/card.scss";
+  import "../../styles/Components/card.scss";
 </script>
 
 <div class="mdc-card shimmer"></div>

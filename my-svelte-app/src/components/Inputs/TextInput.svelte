@@ -13,7 +13,10 @@
   const dispatch = createEventDispatcher();
 
   onMount(() => {
-    const textField = new MDCTextField(document.querySelector(`#${id}`));
+    const element = document.querySelector(`#${id}`);
+    if (element) {
+      const textField = new MDCTextField(element);
+    }
   });
 
   function valueChanged(e) {

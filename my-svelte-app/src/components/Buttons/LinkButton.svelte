@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from "svelte";
   import { MDCRipple } from "@material/ripple";
-  import "../../styles/button.scss";
+  import "../../styles/Components/button.scss";
 
   interface Props {
     label?: string;

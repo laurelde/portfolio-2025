@@ -2,8 +2,7 @@
 @use "@material/menu-surface/mdc-menu-surface";
 @use "@material/menu/mdc-menu";
 @use "@material/select/styles";
-@use "variables" as v;
-
+@use "../Shared/variables" as v;
 .mdc-select {
   --mdc-theme-primary: #a45b37;
   --mdc-theme-on-primary: #fffdf9; 
