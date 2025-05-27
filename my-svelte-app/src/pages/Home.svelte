@@ -11,11 +11,7 @@
 <div class="main-layout">
   <aside class="layout-column">Reach Out!</aside>
   <main>
-    <Hero
-      subtitle="Hi! I'm Laurel."
-      title="I design & build digital experiences."
-      description="I'm a UX engineer specializing in creating intuitive, engaging, and accessible digital products that solve real user problems."
-    />
+    <Hero />
   </main>
   <Footer></Footer>
 </div>

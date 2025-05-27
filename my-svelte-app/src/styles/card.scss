@@ -9,10 +9,10 @@
 
 .mdc-card {
   border-radius: 0;
-  border: 1px solid v.$medium-brown;
+  border: 1px solid v.$medium-purple;
 
   &:hover {
-    border: 2px solid v.$medium-brown;
+    border: 2px solid v.$medium-purple;
   }
 
   &__img {
@@ -63,7 +63,7 @@
   }
 
   h3 {
-    background-color: v.$dark-brown;
+    background-color: v.$dark-purple;
     margin: 0;
     padding: 10px;
     color: white;
@@ -87,6 +87,11 @@
   }
 }
 
-.hero.hero-landing {
+.hero.hero--landing {
   text-align: left;
+
+  .highlight {
+    color: v.$dark-purple;
+    font-weight: bold;
+  }
 }

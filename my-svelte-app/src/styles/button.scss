@@ -1,26 +1,26 @@
-@use "@material/button/styles";
-@use "variables" as v;
 
+@use "variables" as v;
+@use "@material/theme" with (
+  $primary: #3a154c,
+  $secondary: #ceb3f4,
+  $background: #fff,
+);
+@use "@material/button/styles";
 
 .fc-button.mdc-button {
-  // --mdc-theme-primary: v.$dark-brown;
-  // --mdc-theme-on-primary: v.$light-brown; 
-  --mdc-theme-primary: #a45b37;
-  --mdc-theme-on-primary: #fffdf9; 
-  --mdc-outlined-button-outline-color: v.$dark-brown;
-  border-radius: 0;
+  border-radius: 20;
 
   .mdc-button__ripple {
-    border-radius: 0;
+    border-radius: 20;
   }
 
   &.mdc-button--raised,
   &.mdc-button--outlined {
-    border-radius: 0;
+    border-radius: 20;
   }
 
   .mdc-button--outlined {
-    // border-color: v.$dark-brown;;
+    // border-color: v.$dark-purple;;
   }
 
   &:focus {
@@ -65,7 +65,7 @@ button:not(.btn__toggle-group--selected) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px solid v.$dark-brown;
+    border: 1px solid v.$dark-purple;
   
     .mdc-button {
       padding: 0 20px;
@@ -80,7 +80,7 @@ button:not(.btn__toggle-group--selected) {
 }
 
 .btn__toggle-group .mdc-touch-target-wrapper:not(:last-child) .mdc-button--outlined {
-  border-right: 1px solid brown;
+  border-right: 1px solid purple;
   border-left: none;
   border-top: none;
   border-bottom: none;
