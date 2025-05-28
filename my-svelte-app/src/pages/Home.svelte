@@ -4,6 +4,8 @@
   import Hero from "../components/Cards/Hero.svelte";
   import Footer from "./Footer.svelte";
   import About from "./Sections/About.svelte";
+  import Work from "./Sections/Work.svelte";
+  import Contact from "./Sections/Contact.svelte";  
   import "../styles/layouts.scss";
 
   onMount(async () => {});
@@ -14,6 +16,8 @@
   <main>
     <Hero />
     <About />
+    <Work />
+    <Contact />
   </main>
   <Footer></Footer>
 </div>

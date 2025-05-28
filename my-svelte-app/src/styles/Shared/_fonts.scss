@@ -1,21 +1,66 @@
+@use "variables" as v;
+@use "mixins" as *;
+
 h1 {
-  font-size: 4.5em;
+  font-size: 3em;
   line-height: 1.1;
   margin: 0;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+
+  @include screen-s {
+    font-size: 4.5em;
+  }
 }
 
 h2 {
   font-weight: 600;
-  font-size: 2.4em;
+  font-size: 2em;
+
+  @include screen-s {
+    font-size: 2.4em;
+  }
 }
 
 h3 {
-  font-size: 2.4em;
+  font-size: 1.8em;
   line-height: 1.1;
   margin: 0;
   font-optical-sizing: auto;
   font-weight: 400;
+
+  @include screen-s {
+    font-size: 2.4em;
+  }
+}
+
+h4 {
+  margin: 5px 0;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+.highlight {
+  color: v.$dark-purple;
+  font-weight: bold;
+}
+
+.brackets {
+  &::before {
+    content: "{ ";
+  }
+
+  &::after {
+    content: " }";
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

@@ -1,6 +1,10 @@
 @use "./Shared/variables" as v;
 @use "./Shared/mixins" as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: v.$light-purple;
   color: v.$black;
@@ -115,28 +119,7 @@ main {
   }
 }
 
-header {
-  padding: 0 20px;
-  padding: 0 20px;
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 6;
 
-  .mdc-touch-target-wrapper {
-    margin: 0;
-  }
-
-  .mdc-button {
-    padding: 30px 10px;
-    margin: 0;
-    border-bottom: 1px solid white;
-  }
-
-  .mdc-button:hover {
-    border-bottom: 1px solid 
-  }
-}
 
 .match {
   max-width: 350px;

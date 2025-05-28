@@ -1,0 +1,96 @@
+@use "../Shared/variables" as v;
+@use "../Shared/mixins" as *;
+
+.work-item {
+
+  display: flex;
+  max-width: 90vw;
+  margin: 20px auto;
+  padding-bottom: 20px;
+
+  @include screen-s {
+    flex-direction: row;
+    align-items: center;
+    max-width: 70vw;
+  }
+
+  .material-symbols-outlined {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+  }
+
+  span.work-item__time-frame {
+    display: block;
+  }
+
+  .tools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 14px;
+
+    @include screen-s {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    img.tool-card__image {
+      height: 48px;
+      width: 48px;
+      padding: 6px;
+
+      &:hover {
+        width: 54px;
+        height: 54px;
+        padding: 3px;      
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    flex-direction: column;
+
+    @include screen-s {
+      flex-direction: row;
+    }
+
+    .work-item__content {
+      margin-left: 0;
+
+      @include screen-s {
+        margin-left: 30px;
+      }
+    }
+
+    .work-item__bullets {
+      padding-inline-start: 15px;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    flex-direction: column;
+
+    @include screen-s {
+      flex-direction: row-reverse;
+    }
+    
+
+    .work-item__content {
+      margin-right: 0;
+
+      @include screen-s {
+        margin-right: 30px;
+        text-align:right;
+      }
+    }
+
+    .work-item__bullets {
+      padding-inline-start: 15px;
+      text-align: left;
+    }
+  }
+}
+

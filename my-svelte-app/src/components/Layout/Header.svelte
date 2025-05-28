@@ -1,15 +1,16 @@
 <script>
   import LinkButton from "../Buttons/LinkButton.svelte";
   import { logout } from "../../api/authentication";
+  import "../../styles/header.scss";
 </script>
 
 <header>
   <div class="row align-right">
-    <LinkButton theme="" href="/#/About" label="About"></LinkButton>
-    <LinkButton theme="" href="/#/Work" label="Work"></LinkButton>
+    <LinkButton theme="" href="/#about" label="About"></LinkButton>
+    <LinkButton theme="" href="/#work" label="Work"></LinkButton>
     <LinkButton
       theme="mdc-button--raised mdc-button--touch"
-      href="/#/Contact"
+      href="/#contact"
       label="Connect"
     ></LinkButton>
   </div>

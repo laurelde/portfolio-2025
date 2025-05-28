@@ -9,6 +9,6 @@
 
 <div class="section-header" id={sectionId}>
   <h2>
-    {name}
+    {@html name}
   </h2>
 </div>

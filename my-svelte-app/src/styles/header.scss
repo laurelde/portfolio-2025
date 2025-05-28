@@ -1,0 +1,34 @@
+@use "./Shared/variables" as v;
+@use "./Shared/mixins" as *;
+
+header {
+  padding: 0 20px;
+  padding: 0 20px;
+  z-index: 6;
+
+  .mdc-touch-target-wrapper {
+    margin: 0;
+  }
+
+  .mdc-button:not(.mdc-button--raised) {
+    padding: 30px 10px;
+    margin: 0;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+  }
+
+  .mdc-button:hover:not(.mdc-button--raised) {
+    border-bottom: 1px solid;
+    border-radius: 0;
+  }
+}
+
+// Scroll styling
+html:not([data-scroll='0']) {
+  header {
+    background-color: #fff;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    position: sticky;
+    top: 0;
+  }
+}

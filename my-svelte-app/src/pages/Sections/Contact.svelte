@@ -5,7 +5,7 @@
 </script>
 
 <div class="section">
-  <SectionHeader name="<span class='highlight'>About</span> Me" sectionId="about" />
+  <SectionHeader name="Let's get <span class='highlight'>connect</span>ed!" sectionId="about" />
   <div class="section-content">
     <img class="image" src={headshot} alt="Headshot" />
     <div class="text">

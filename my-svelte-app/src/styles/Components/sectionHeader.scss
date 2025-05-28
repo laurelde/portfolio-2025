@@ -1,4 +1,9 @@
 
 .section-header {
-  text-align: left
+  text-align: left;
+  padding-top: 40px;
+
+  .highlight {  
+    border-bottom: 4px solid #3a154c;
+  }
 }
