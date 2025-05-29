@@ -1,0 +1,176 @@
+@use "../Shared/variables" as v;
+@use "../Shared/mixins" as *;
+
+.project-item {
+  display: flex;
+  max-width: 90vw;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  flex-direction: column;
+
+  .material-symbols-outlined {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+  }
+
+  span.work-item__time-frame {
+    display: block;
+  }
+
+  .tools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 14px;
+
+    img.tool-card__image {
+      height: 48px;
+      width: 48px;
+      padding: 6px;
+
+      &:hover {
+        width: 54px;
+        height: 54px;
+        padding: 3px;
+      }
+    }
+  }
+
+  .project-header {
+    background-image: linear-gradient(#fff, #e6d4ff00);
+    padding: 20px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    flex-direction: column;
+  }
+
+  .work-item__content {
+    margin-right: 0;
+
+    @include screen-s {
+      margin-right: 30px;
+      text-align: right;
+    }
+  }
+
+  .work-item__bullets {
+    padding-inline-start: 15px;
+    text-align: left;
+  }
+}
+
+.project-images {
+  margin: -20px 10px 20px 10px;
+  width: auto;
+}
+
+.project-images--app {
+  display: flex;
+  flex-direction: row;
+  height: 550px;
+  justify-content: center;
+}
+
+img.project-image.project-image--app {
+  margin-left: -20px;
+  position: relative;
+  margin-right: -20px;
+  border-radius: 10px;
+
+  &:nth-of-type(1),
+  &:nth-of-type(5) {
+    display: none;
+
+    @include screen-s {
+      display: block;
+      height: 260px;
+      margin-top: 20px;
+    }
+
+    @include screen-m {
+      height: 360px;
+      margin-top: 20px;
+    }
+
+    @include screen-l {
+      height: 460px;
+      margin-top: 20px;
+    }
+    
+  }
+
+  &:nth-of-type(2),
+  &:nth-of-type(4) {
+    display: block;
+    height: 280px;
+    margin-top: 20px;
+    z-index: 2;
+    margin-top: 10px;
+
+    @include screen-m {
+      height: 380px;
+      margin-top: 10px;
+    }
+
+    @include screen-l {
+      height: 480px;
+      margin-top: 20px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    z-index: 3;
+    height: 300px;
+
+    @include screen-m {
+      height: 400px;
+    }
+
+    @include screen-l {
+      height: 500px;
+    }
+  }
+
+  &:hover {
+    height: 300px;
+    margin-top: 5px;
+    margin-left: -5px;
+    z-index: 5;
+    margin-right: -5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+
+    @include screen-m {
+      height: 400px;
+      margin-top: -10px;
+    }
+
+    @include screen-l {
+      height: 550px;
+      margin-top: -25px;
+    }
+  }
+
+  .project-images--desktop {
+    max-height: 250px;
+    display: flex;
+    flex-direction: row;
+
+    img.project-image.project-image--desktop {
+      height: 250px;
+      margin-left: -20px;
+      margin-right: -20px;
+
+      &:hover {
+        height: 270px;
+        margin-top: -10px;  
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

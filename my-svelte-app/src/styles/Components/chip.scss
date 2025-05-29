@@ -1,0 +1,21 @@
+@use "../Shared/variables" as v;
+
+.chip-set {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+
+  .chip {
+    border: 2px solid v.$dark-purple;
+    border-radius: 100px;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: v.$dark-purple;
+
+    .chip__label {
+      color: v.$light-purple;
+    }
+  }
+}

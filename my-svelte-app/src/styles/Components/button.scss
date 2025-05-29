@@ -27,6 +27,12 @@
     outline: none;
   }
 
+  &.mdc-button--outline {
+    border: 2px solid v.$dark-purple;
+    color: v.$dark-purple;
+    font-weight: 600;
+  }
+
 }
 
 .btn__toggle-group--selected {

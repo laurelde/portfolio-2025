@@ -12,9 +12,6 @@
       class="highlight">digital experiences.</span
     >
   </h1>
-  <h3>
-    I'm a UX engineer specializing in creating accessible digital products that solve real user problems.
-  </h3>
   <LinkButton
     label="Let's Connect!"
     href="/#about"

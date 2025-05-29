@@ -152,3 +152,19 @@ main {
     bottom: 50px;
   }
 }
+
+.section {
+  width: 80vw;
+  margin: auto;
+
+  @include screen-m {
+    width: 70vw;
+  }
+  @include screen-l {
+    width: 50vw;
+  }
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}

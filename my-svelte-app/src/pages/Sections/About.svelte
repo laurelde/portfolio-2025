@@ -10,6 +10,8 @@
     <img class="image" src={headshot} alt="Headshot" />
     <div class="text">
       <p>
+        I'm a UX engineer specializing in creating accessible digital products that solve real user problems.
+
         I am a software engineer with a passion for building scalable web
         applications. I have experience in various technologies including
         TypeScript, Svelte, and Node.js.

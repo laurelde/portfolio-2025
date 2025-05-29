@@ -1,23 +1,25 @@
 <script lang="ts">
   import SectionHeader from "../../components/Layout/SectionHeader.svelte";
   import headshot from "../../assets/images/headshot.jpeg";
-  import "../../styles/Sections/about.scss";
+  import LinkButton from "../../components/Buttons/LinkButton.svelte";
+  import "../../styles/Sections/contact.scss";
 </script>
 
 <div class="section">
-  <SectionHeader name="Let's get <span class='highlight'>connect</span>ed!" sectionId="about" />
+  <SectionHeader name="Let's get <span class='highlight'>connect</span>ed!" sectionId="contact" />
   <div class="section-content">
-    <img class="image" src={headshot} alt="Headshot" />
     <div class="text">
       <p>
-        I am a software engineer with a passion for building scalable web
-        applications. I have experience in various technologies including
-        TypeScript, Svelte, and Node.js.
-      </p>
-      <p>
-        In my free time, I enjoy contributing to open source projects and
-        exploring new programming languages.
+        I'm always eager to connect with fellow developers and entrepreneurs.
+        Whether you have a question, want to collaborate on a project, or just
+        want to chat about technology, feel free to reach out!
       </p>
     </div>
+
+    <LinkButton
+      label="Get in touch"
+      href="mailto:laureledentinger@gmail.com"
+      theme="mdc-button--outline mdc-button--touch"
+    />
   </div>
 </div>
