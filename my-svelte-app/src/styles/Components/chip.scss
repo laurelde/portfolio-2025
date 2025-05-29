@@ -1,14 +1,21 @@
 @use "../Shared/variables" as v;
+@use "../Shared/mixins" as *;
 
 .chip-set {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: 0px;
   justify-content: center;
+  font-size: 12px;
+
+  @include screen-s {
+    margin: 10px;
+    font-size: 14px;
+  }
 
   .chip {
-    border: 2px solid v.$dark-purple;
+    border: 1px solid v.$light-purple;
     border-radius: 100px;
     padding: 5px 10px;
     margin: 5px;

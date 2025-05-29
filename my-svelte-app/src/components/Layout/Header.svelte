@@ -8,6 +8,7 @@
   <div class="row align-right">
     <LinkButton theme="" href="/#about" label="About"></LinkButton>
     <LinkButton theme="" href="/#work" label="Work"></LinkButton>
+    <LinkButton theme="" href="/#projects" label="Projects"></LinkButton>
     <LinkButton
       theme="mdc-button--raised mdc-button--touch"
       href="/#contact"

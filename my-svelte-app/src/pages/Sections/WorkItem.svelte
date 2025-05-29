@@ -24,7 +24,7 @@
       <ToolCard name={tool.name} imageLink={tool.imageLink} svg={tool.svg}/>
     {/each}
   </div>
-  <div class="work-item__content"> 
+  <div class="work-item__content text-block"> 
     
     <h3>{company}</h3>
     <h4>{title}</h4>

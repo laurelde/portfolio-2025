@@ -167,4 +167,25 @@ main {
   &:last-child {
     margin-bottom: 100px;
   }
+
+  .section-content.section-content--text-block-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .text-block {
+      margin-left: -20px;
+      padding-left: 40px;
+    }
+  }
+}
+
+.text-block {
+  padding: 10px 20px;
+  background-color: v.$dark-purple;
+  border-radius: 10px;
+  color: v.$light-purple;
+  margin: 10px;
+  z-index: 0;
 }

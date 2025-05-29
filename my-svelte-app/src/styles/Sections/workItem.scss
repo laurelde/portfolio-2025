@@ -5,6 +5,7 @@
 
   display: flex;
   max-width: 90vw;
+  flex-direction: column-reverse;
   margin: 20px auto;
   padding-bottom: 20px;
 
@@ -30,11 +31,23 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 14px;
+    border: 3px solid v.$dark-purple;
+    border-top: none;
+    padding: 20px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin: 0 20px;
 
     @include screen-s {
       display: flex;
       flex-direction: column;
       margin-bottom: 0;
+      padding: 40px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      margin: 0;
+      border-top: 3px solid v.$dark-purple;
     }
 
     img.tool-card__image {
@@ -51,7 +64,7 @@
   }
 
   &:nth-of-type(even) {
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     @include screen-s {
       flex-direction: row;
@@ -61,17 +74,27 @@
       margin-left: 0;
 
       @include screen-s {
-        margin-left: 30px;
+        margin-left: 0px;
+        // padding-left: 60px !important;
       }
     }
 
     .work-item__bullets {
       padding-inline-start: 15px;
     }
+
+    .tools {
+      @include screen-s {
+        padding-right: 40px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+      }
+    }
   }
 
   &:nth-of-type(odd) {
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     @include screen-s {
       flex-direction: row-reverse;
@@ -82,14 +105,42 @@
       margin-right: 0;
 
       @include screen-s {
-        margin-right: 30px;
         text-align:right;
+        margin-right: 0px;
+        // padding-right: 60px !important;
       }
     }
 
     .work-item__bullets {
       padding-inline-start: 15px;
       text-align: left;
+    }
+
+    .tools {
+      @include screen-s {
+        padding-left: 40px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: none;
+      }
+    }
+  }
+
+  .work-item__content.text-block {
+    padding: 20px 40px;
+    margin-bottom: 0;
+    margin: 0;
+
+    @include screen-s {
+      margin-bottom: 10px;
+    }
+
+    h3, .work-item__time-frame, span {
+      color: v.$light-purple;
+    }
+
+    h4 {
+      color: v.$white;
     }
   }
 }

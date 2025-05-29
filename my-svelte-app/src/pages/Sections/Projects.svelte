@@ -31,12 +31,12 @@
         classify_img5
       ],
       "description": "Mobile app prototype for creating local classes and events for students to meet up and learn together.",
-      "tools": [ "Sketching", "Wireframing", "Prototyping", "UX Research" ]
+      "tools": [ "UX Research", "Wireframing", "Prototyping", "Sketching" ]
     },
     {
       "websiteLink": "https://fetch-7gkioa2ow-laurel-dentingers-projects.vercel.app/#/Login",
       "githubLink": "https://github.com/laurelde/fetch/tree/main/docs",
-      "projectName": "Fetch Pet Finder",
+      "projectName": "Fetch App",
       "projectType": "Frontend Development",  
       "images" : [
         fetch_landing_image,
@@ -44,12 +44,9 @@
         fetch_favorite_image
       ],
       "description": [
-        "Engineered a versatile library of reusable UI components using the Svelte framework, optimizing efficiency and consistency across multiple projects within the organization.",
-        "Diligently ensured seamless cross-browser compatibility and responsive design implementation in frontend code, employing BrowserStack and adhering to industry best practices.",
-        "Spearheaded the establishment of accessible code standards for HTML markup, fostering WCAG AA compliance and enhancing inclusivity for all users.",
-        "Authored comprehensive documentation for seamlessly integrating Svelte components into .NET projects for full-stack developers, thereby streamlining development workflows and enhancing project scalability."
+        "Svelte app for browsing and favoriting adoptable dogs, using REST APIs and session storage for user authentication.",
       ],
-      "tools": [ "Frontend Development", "UX Design", "REST APIs", "Svelte" ]
+      "tools": [ "Svelte", "REST APIs", "TypeScript", "UX Design" ]
 
     },
     {
@@ -96,7 +93,7 @@
       {/snippet}
     </ProjectItem>
 
-    <!-- <ProjectItem
+    <ProjectItem
     projectName={projectData[1].projectName}
     websiteLink={projectData[1].websiteLink}
     githubLink={projectData[1].githubLink}
@@ -104,6 +101,38 @@
     description={projectData[1].description}
     tools={projectData[1].tools}
   >
+  {#snippet links()}
+  <ul>
+    <li class="icon--social-media">
+      <a href={projectData[1].websiteLink} aria-label="Fetch App Website" target="_blank"
+        >
+      <span class="material-symbols-outlined">
+        arrow_circle_right
+        </span></a>
+    </li>
+  <li class="icon--social-media">
+    <a
+      href={projectData[1].githubLink}
+      aria-label="Github for Fetch App"
+      target="_blank"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+        ><path
+          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+        ></path></svg
+      ></a
+    >
+  </li>
+</ul>
+  {/snippet}
   {#snippet images()}
     <div class="project-images project-images--desktop">
       {#each projectData[1].images as image}
@@ -111,5 +140,5 @@
       {/each}
     </div>
   {/snippet}
-</ProjectItem> -->
+</ProjectItem>
 </div>

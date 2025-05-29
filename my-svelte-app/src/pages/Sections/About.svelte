@@ -6,19 +6,14 @@
 
 <div class="section">
   <SectionHeader name="<span class='highlight'>About</span> Me" sectionId="about" />
-  <div class="section-content">
+  <div class="section-content section-content--text-block-right">
     <img class="image" src={headshot} alt="Headshot" />
-    <div class="text">
+    <div class="text-block text-block--about ">
       <p>
-        I'm a UX engineer specializing in creating accessible digital products that solve real user problems.
-
-        I am a software engineer with a passion for building scalable web
-        applications. I have experience in various technologies including
-        TypeScript, Svelte, and Node.js.
+        I'm a UX engineer specializing in creating accessible digital products that solve real user problems. I graduated from the University of Michigan with a degree in User Experience Design and Computer Science, and now live in Nashville, Tennessee. 
       </p>
       <p>
-        In my free time, I enjoy contributing to open source projects and
-        exploring new programming languages.
+        In my free time, I enjoy playing volleyball, hiking, and travelling.
       </p>
     </div>
   </div>

@@ -10,26 +10,31 @@
     githubLink?: string;
     downloadLink?: string;
     images: Snippet;
+    links?: Snippet;
     description: string[];
     tools?: string[];
   }
 
-  let { projectName, websiteLink, githubLink, downloadLink, images, description, tools }: ProjectItemProps = $props();
+  let { projectName, websiteLink, githubLink, downloadLink, images, links, description, tools }: ProjectItemProps = $props();
 
   import "../../styles/Sections/projectItem.scss";
 </script>
 
 <div class="project-item">
-  <div class="project-header">
-    <h3>{projectName}</h3>
+  <div class="project-header text-block">
+    <span class="project-header-text"><h3>{projectName}</h3><span class="project-links">
+      {#if links}
+        {@render links()}
+      {/if}
+    </span></span>
     <p class="project-item__description">{description}</p>
     <div class="project-item__toolbar">
       <Chip labels={tools} />
     </div>
   </div>
   <div class="project-images">
-    {@render images()}
+    {#if images}
+      {@render images()}
+    {/if}
   </div>
 </div>
-
-
