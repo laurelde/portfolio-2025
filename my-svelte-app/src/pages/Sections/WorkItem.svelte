@@ -19,7 +19,7 @@
 </script>
 
 <div class="work-item">
-  <div class="tools">
+  <div class="tools animate">
     {#each tools as tool}
       <ToolCard name={tool.name} imageLink={tool.imageLink} svg={tool.svg}/>
     {/each}

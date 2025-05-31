@@ -73,10 +73,22 @@
             padding: 10px;
             margin: 5px;
             color: v.$white;
+            border-radius: 100px;
+            transition: all 0.3s ease-in-out;
+
+            &.material-icon-link {
+              padding-bottom: 5px;
+              padding-left: 7px;
+              padding-right: 11px;
+            }
 
             .material-symbols-outlined {
               font-size: 28px;
               top: -2px;
+            }
+
+            &:hover {
+              background-color: #ffffff50;
             }
           }
         }
@@ -107,7 +119,7 @@
 .project-images--app {
   display: flex;
   flex-direction: row;
-  height: 550px;
+  height: auto;
   justify-content: center;
 }
 
@@ -196,6 +208,7 @@ img.project-image.project-image--app {
   max-height: 250px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   img.project-image.project-image--desktop {
     width: 50vw;
@@ -236,6 +249,16 @@ img.project-image.project-image--app {
       margin-right: -100px;
       transition: all 0.3s ease-in-out;
       box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+
+      &:nth-of-type(1) {
+        margin-left: -100px;
+        box-sizing: content-box;
+      }
+
+      &:nth-of-type(3) {
+        margin-right: -100px;
+        box-sizing: content-box;
+      }
 
       @include screen-m {
         margin-top: -10px;

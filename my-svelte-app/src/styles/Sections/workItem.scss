@@ -43,11 +43,15 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 0;
-      padding: 40px;
+      padding: 20px;
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
       margin: 0;
       border-top: 3px solid v.$dark-purple;
+    }
+
+    @include screen-m {
+      padding: 40px;
     }
 
     img.tool-card__image {
@@ -85,10 +89,18 @@
 
     .tools {
       @include screen-s {
-        padding-right: 40px;
+        padding-right: 20px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-right: none;
+      }
+
+      @include screen-m {
+        padding-right: 40px;
+      }
+
+      &.in-view {
+        animation: slideInFromright 0.5s ease-in-out;
       }
     }
   }
@@ -118,10 +130,18 @@
 
     .tools {
       @include screen-s {
-        padding-left: 40px;
+        padding-left: 20px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border-left: none;
+      }
+
+      @include screen-m {
+        padding-left: 40px;
+      }
+
+      &.in-view {
+        animation: slideInFromLeft 0.5s ease-in-out;
       }
     }
   }
@@ -145,3 +165,48 @@
   }
 }
 
+@-webkit-keyframes slideInFromLeft {
+  from {
+    position: relative;
+    left: -200px;
+  }
+
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+@keyframes slideInFromLeft {
+  from {
+    position: relative;
+    left: -200px;
+  }
+
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slideInFromRight {
+  from {
+    position: relative;
+    right: -200px;
+  }
+
+  to {
+    position: relative;
+    right: 0;
+  }
+}
+@keyframes slideInFromRight {
+  from {
+    position: relative;
+    right: -200px;
+  }
+
+  to {
+    position: relative;
+    right: 0;
+  }
+}

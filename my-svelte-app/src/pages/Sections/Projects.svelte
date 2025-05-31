@@ -39,8 +39,8 @@
       "projectName": "Fetch App",
       "projectType": "Frontend Development",  
       "images" : [
-        fetch_landing_image,
         fetch_browse_image,
+        fetch_landing_image,
         fetch_favorite_image
       ],
       "description": [
@@ -75,24 +75,8 @@
 </script>
 
 <div class="section">
-  <SectionHeader name="Recent <span class='highlight'>Projects</span>" sectionId="projects"/>
-      <ProjectItem
-        projectName={projectData[0].projectName}
-        websiteLink={projectData[0].websiteLink}
-        githubLink={projectData[0].githubLink}
-        downloadLink={projectData[0].downloadLink}
-        description={projectData[0].description}
-        tools={projectData[0].tools}
-      >
-      {#snippet images()}
-        <div class="project-images project-images--app">
-          {#each projectData[0].images as image}
-            <img src={image} alt={projectData[0].projectName} class="project-image project-image--app" />
-          {/each}
-        </div>
-      {/snippet}
-    </ProjectItem>
 
+  <SectionHeader name="Recent <span class='highlight'>Projects</span>" sectionId="projects"/>
     <ProjectItem
     projectName={projectData[1].projectName}
     websiteLink={projectData[1].websiteLink}
@@ -104,7 +88,7 @@
   {#snippet links()}
   <ul>
     <li class="icon--social-media">
-      <a href={projectData[1].websiteLink} aria-label="Fetch App Website" target="_blank"
+      <a href={projectData[1].websiteLink} aria-label="Fetch App Website" target="_blank" class="material-icon-link"
         >
       <span class="material-symbols-outlined">
         arrow_circle_right
@@ -131,7 +115,7 @@
       ></a
     >
   </li>
-</ul>
+  </ul>
   {/snippet}
   {#snippet images()}
     <div class="project-images project-images--desktop">
@@ -140,5 +124,23 @@
       {/each}
     </div>
   {/snippet}
-</ProjectItem>
+  </ProjectItem>   
+  <ProjectItem
+        projectName={projectData[0].projectName}
+        websiteLink={projectData[0].websiteLink}
+        githubLink={projectData[0].githubLink}
+        downloadLink={projectData[0].downloadLink}
+        description={projectData[0].description}
+        tools={projectData[0].tools}
+      >
+      {#snippet images()}
+        <div class="project-images project-images--app">
+          {#each projectData[0].images as image}
+            <img src={image} alt={projectData[0].projectName} class="project-image project-image--app" />
+          {/each}
+        </div>
+      {/snippet}
+    </ProjectItem>
+
+
 </div>

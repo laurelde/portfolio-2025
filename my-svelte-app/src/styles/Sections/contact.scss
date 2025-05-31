@@ -17,3 +17,23 @@
     }
   }
 }
+
+#contact-section {
+  padding: 10px 20px 100px 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+    .section-header {
+      @include screen-m {
+        padding-top: 0;
+        
+      }
+    }
+
+  @include screen-m {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

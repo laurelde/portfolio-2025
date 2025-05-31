@@ -5,7 +5,7 @@
   import "../../styles/Sections/contact.scss";
 </script>
 
-<div class="section">
+<div class="section" id="contact-section">
   <SectionHeader name="Let's get <span class='highlight'>connect</span>ed!" sectionId="contact" />
   <div class="section-content">
     <div class="text">

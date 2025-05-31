@@ -21,7 +21,7 @@
 </script>
 
 <div class="project-item">
-  <div class="project-header text-block">
+  <div class="project-header text-block animate">
     <span class="project-header-text"><h3>{projectName}</h3><span class="project-links">
       {#if links}
         {@render links()}
