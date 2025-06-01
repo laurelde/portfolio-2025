@@ -1,0 +1,98 @@
+@use "./Shared/variables" as v;
+@use "./Shared/mixins" as *;
+@use "./Shared/animations" as a;
+
+.landing-loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: black;
+  animation-name: fadeOut;
+  animation-delay: 4s;
+  animation-duration: 1s;
+
+  img {
+    animation: slideRight 3s linear;
+    animation-iteration-count:  1;
+    animation-delay: 0ms;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 2;  
+    left: 80vw;
+    background-color: black;
+  }
+
+  h1 {
+    color: v.$light-purple;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    margin: 0 20vw;
+
+    &::before {
+      content: '';
+      background: black;
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      animation-name: slideRevealFromLeft;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      right: 0;
+    }
+  }
+}
+
+// Animations 
+
+
+@keyframes slideRevealFromLeft {
+  0% {
+    width: 100%;
+    visibility: hidden;
+  }
+  100% {
+    width: 0%;
+    visibility: visible;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    left: 20vw;
+  }
+  100% {
+    left: 80vw;
+  }
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}

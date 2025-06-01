@@ -7,10 +7,11 @@
   import Work from "./Sections/Work.svelte";
   import Contact from "./Sections/Contact.svelte";  
   import Projects from "./Sections/Projects.svelte";
-  import "../styles/layouts.scss";
-  import LandingLoader from "./LandingLoader.svelte";
+  import "../styles/landing-loader.scss";
+  import Opener from "../components/Cards/Opener.svelte";
+  import logo_light from "../assets/images/logo_light.svg";
     
-  let showLoader = true;
+  let showOpener = true;
     
 
   // onMount(async () => {
@@ -41,26 +42,10 @@
 
   // Add the observer to each of those elements
   allAnimatedElements.forEach((element) => observer.observe(element));
-
-  setTimeout(() => {
-      showLoader = false;
-    }, 5000);
-  }); 
+});
 </script>
 
-
-{#if showLoader}
-  <LandingLoader />
-{:else}
-<Header></Header>
-<div class="main-layout">
-  <main>
-    <Hero />
-    <About />
-    <Work />
-    <Projects />
-    <Contact />
-  </main>
-  <Footer></Footer>
+<div class="landing-loader">
+  <h1>Welcome to my <span class="switch-text"></span> Portfolio</h1>
+  <img src={logo_light} alt="Logo" class="logo-light animate" />
 </div>
-{/if}

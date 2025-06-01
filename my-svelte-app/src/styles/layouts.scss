@@ -155,8 +155,11 @@ main {
 }
 
 .section {
-  width: 80vw;
   margin: auto;
+
+  @include screen-s {
+    width: 80vw;
+  }
 
   @include screen-m {
     width: 70vw;

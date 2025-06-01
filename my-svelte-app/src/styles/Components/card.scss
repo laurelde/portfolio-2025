@@ -98,8 +98,51 @@
   h1, h3 {
     margin-bottom: 20px;
   }
+
+  h1 {
+    &:not(.in-view.display) {
+      visibility: hidden;
+    }
+
+    &.in-view {
+      animation: fadeIn 1s ease-in;
+    }
+  }
+
+  .mdc-touch-target-wrapper {
+    &:not(.in-view.display) {
+      visibility: hidden;
+    }
+
+    &.in-view {
+      animation: fadeIn 1s ease-in;
+    }
+  }
 }
 
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
 
 
