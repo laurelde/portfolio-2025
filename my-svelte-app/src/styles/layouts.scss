@@ -152,6 +152,10 @@ main {
     left: 2vw;
     bottom: 50px;
   }
+
+  @include screen-l {
+    left: 5vw;
+  }
 }
 
 .section {

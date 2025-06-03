@@ -4,7 +4,7 @@
   import "../../styles/header.scss";
 </script>
 
-<header>
+<header class="fade-in">
   <div class="row align-right">
     <LinkButton theme="" href="/#about" label="About"></LinkButton>
     <LinkButton theme="" href="/#work" label="Work"></LinkButton>

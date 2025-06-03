@@ -121,6 +121,10 @@
   flex-direction: row;
   height: auto;
   justify-content: center;
+
+  @include screen-l {
+    height: 550px;
+  }
 }
 
 img.project-image.project-image--app {
@@ -166,7 +170,7 @@ img.project-image.project-image--app {
 
     @include screen-l {
       height: 480px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
 

@@ -99,7 +99,7 @@
     margin-bottom: 20px;
   }
 
-  h1 {
+  h1, h2 {
     &:not(.in-view.display) {
       visibility: hidden;
     }
