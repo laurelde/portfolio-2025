@@ -15,21 +15,26 @@
   animation-duration: 1s;
 
   img {
-    animation: slideRight 3s linear;
-    animation-iteration-count:  1;
-    animation-delay: 0ms;
+    width: 100vw;
+    height: 150px;
+    animation: glow 1.5s ease-in-out infinite alternate;
     position: absolute;
-    width: 100px;
-    height: 100px;
     z-index: 2;  
-    left: 80vw;
-    background-color: black;
+    background-color: transparent;
+
+    @include screen-s {
+      background-color: black;
+      animation: slideRight 3s linear;
+      width: 100px;
+      height: 100px;
+      left: 80vw;
+    }
   }
 
   h1 {
     color: v.$light-purple;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     position: relative;
     z-index: 1;
@@ -37,21 +42,36 @@
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-delay: 0s;
-    margin: 0 20vw;
+    margin: 0 10vw;
+    text-align: center;
+    display: none;
+
+    @include screen-s {
+      display: block;
+      margin: 0 20vw;
+      font-size: 3rem;
+      // text-align: right;
+    }
 
     &::before {
       content: '';
       background: black;
       position: absolute;
-      width: 60%;
       height: 100%;
-      animation-name: slideRevealFromLeft;
+      width: 60%;
+      animation-name: slideRevealFromTop;
       animation-duration: 3s;
       animation-timing-function: linear;
       animation-delay: 0s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       right: 0;
+      bottom: 0;
+
+      @include screen-s {
+        animation-name: slideRevealFromLeft;
+        width: 60%;
+      }
     }
   }
 }
@@ -67,6 +87,26 @@
   100% {
     width: 0%;
     visibility: visible;
+  }
+}
+
+@keyframes slideRevealFromTop {
+  0% {
+    height: 100%;
+    visibility: visible;
+  }
+  100% {
+    height: 0%;
+    visibility: hidden;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: 20vw;
+  }
+  100% {
+    top: 80vw;
   }
 }
 
@@ -94,5 +134,16 @@
   }
   100% {
     opacity: 0%;
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow( 0 0 5px #fff) drop-shadow( 0 0 15px #e60073) drop-shadow( 0 0 20px #e60073);
+  }
+
+  to {
+    
+    filter: drop-shadow( 0 0 20px #fff) drop-shadow( 0 0 25px #e60073) drop-shadow( 0 0 40px #e60073);
   }
 }

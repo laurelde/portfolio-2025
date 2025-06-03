@@ -5,6 +5,8 @@ header {
   padding: 0 20px;
   padding: 0 20px;
   z-index: 6;
+  background: transparent;
+  box-shadow: none;
 
   .mdc-touch-target-wrapper {
     margin: 0;
@@ -20,6 +22,40 @@ header {
   .mdc-button:hover:not(.mdc-button--raised) {
     border-bottom: 1px solid;
     border-radius: 0;
+  }
+
+  &.mobile-header {
+    position: fixed !important;
+    width: 100vw;
+    padding: 0;
+
+    nav {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0;
+        margin: 0;
+
+        .mdc-touch-target-wrapper {
+          margin: 0;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+
+          .mdc-button {
+            width: 100%;
+
+            &.mdc-button--raised {
+              margin: 0;
+              padding: 30px 20px;
+              border-radius: 0;
+            }
+          }
+      }
+      }
+    }
   }
 }
 
