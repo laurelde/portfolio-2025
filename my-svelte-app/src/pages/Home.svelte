@@ -13,12 +13,6 @@
   let showLoader = true;
     
 
-  // onMount(async () => {
-  //   setTimeout(() => {
-  //     showOpener = false;
-  //   }, 3000);
-  // });
-
   onMount(async() => {
  console.log("DOM COntent Loaded, applying animations...");
 // Use Intersection Observer to determine if objects are within the viewport
@@ -41,7 +35,6 @@
 
   // Add the observer to each of those elements
   allAnimatedElements.forEach((element) => observer.observe(element));
-
   setTimeout(() => {
       showLoader = false;
     }, 5000);
@@ -49,18 +42,17 @@
 </script>
 
 
-{#if showLoader}
-  <LandingLoader />
-{:else}
-<Header></Header>
-<div class="main-layout">
-  <main>
-    <Hero />
-    <About />
-    <Work />
-    <Projects />
-    <Contact />
-  </main>
-  <Footer></Footer>
-</div>
+  <LandingLoader classes={`${showLoader ? "" : "hide"}`}/>
+  {#if !showLoader}
+    <Header></Header>
+    <div class="main-layout">
+      <main>
+        <Hero />
+        <About />
+        <Work />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer></Footer>
+    </div>
 {/if}

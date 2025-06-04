@@ -14,21 +14,17 @@
   animation-delay: 4s;
   animation-duration: 1s;
 
-  img {
+  .animate {
     width: 100vw;
     height: 150px;
     animation: glow 1.5s ease-in-out infinite alternate;
     position: absolute;
     z-index: 2;  
     background-color: transparent;
+  }
 
-    @include screen-s {
-      background-color: black;
-      animation: slideRight 3s linear;
-      width: 100px;
-      height: 100px;
-      left: 80vw;
-    }
+  &.hide {
+    display: none;
   }
 
   h1 {
@@ -139,11 +135,11 @@
 
 @keyframes glow {
   from {
-    filter: drop-shadow( 0 0 5px #77637c) drop-shadow( 0 0 15px #65007b) drop-shadow( 0 0 20px #c332f7);
+    filter: drop-shadow( 0 0 5px #77637c) drop-shadow( 0 0 15px #65007b) drop-shadow( 0 0 20px #c332f7) drop-shadow( 0 0 100px #edbaff);
   }
 
   to {
     
-    filter: drop-shadow( 0 0 20px #77637c) drop-shadow( 0 0 25px #65007b) drop-shadow( 0 0 40px #c332f7);
+    filter: drop-shadow( 0 0 20px #77637c) drop-shadow( 0 0 25px #65007b) drop-shadow( 0 0 40px #c332f7) drop-shadow( 0 0 100px #edbaff);
   }
 }
