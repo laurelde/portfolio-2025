@@ -7,12 +7,14 @@
     label?: string;
     disabled?: boolean;
     theme?: string;
+    type?: string;
   }
 
   let {
     label = "",
     disabled = false,
     theme = "mdc-button--raised",
+    type = "button",
   }: Props = $props();
 
   const dispatch = createEventDispatcher();
@@ -33,6 +35,7 @@
     class={`fc-button mdc-button mdc-button--touch ${theme}`}
     {disabled}
     onclick={onClick}
+    {type}
   >
     <span class="mdc-button__ripple"></span>
     <span class="mdc-button__touch"></span>

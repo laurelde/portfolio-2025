@@ -9,6 +9,7 @@
     href?: string;
     theme?: string;
     classes?: string;
+    type?: string;
   }
 
   let {
@@ -17,6 +18,7 @@
     href = "",
     theme = "mdc-button--raised",
     classes = "",
+    type = "button",
   }: Props = $props();
 
   onMount(() => {
@@ -28,7 +30,7 @@
 </script>
 
 <div class={`mdc-touch-target-wrapper ${classes}`}>
-  <a {href} class={`fc-button mdc-button mdc-button--touch ${theme}`}>
+  <a {href} class={`fc-button mdc-button mdc-button--touch ${theme}`} type={type} aria-label={label} aria-disabled={disabled}>
     <span class="mdc-button__ripple"></span>
     <span class="mdc-button__touch"></span>
     <span class="mdc-button__label">{label}</span>

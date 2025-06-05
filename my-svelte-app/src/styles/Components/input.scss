@@ -6,9 +6,11 @@
 @include textfield.core-styles;
 
 .mdc-text-field {
-  --mdc-theme-primary: #a45b37;
-  --mdc-theme-on-primary: #fffdf9; 
+  --mdc-theme-primary: #3a154c;
+  --mdc-theme-on-primary: #e6d4ff; 
   --mdc-shape-small: 0;
+
+  // @include shape-radius(10px, $rtl-reflexive);
 
   .mdc-text-field__input {
     padding: 0 14px;

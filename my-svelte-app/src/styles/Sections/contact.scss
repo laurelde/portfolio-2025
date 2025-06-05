@@ -38,3 +38,12 @@
     padding: 10px 40px 100px 40px;
   }
 }
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+
+  .mdc-text-field {
+    margin: 20px 0;
+  }
+}

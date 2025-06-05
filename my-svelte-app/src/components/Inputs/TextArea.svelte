@@ -28,7 +28,7 @@
   }
 </script>
 
-<label {id} class="mdc-text-field mdc-text-field--outlined">
+<label {id} class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea ">
   <span class="mdc-notched-outline">
     <span class="mdc-notched-outline__leading"></span>
     <span class="mdc-notched-outline__notch">
@@ -36,11 +36,8 @@
     </span>
     <span class="mdc-notched-outline__trailing"></span>
   </span>
-  <input
-    type="text"
-    class="mdc-text-field__input"
-    aria-labelledby={`${id}-field-label`}
-    oninput={valueChanged}
-    {name}
-  />
+  <span class="mdc-text-field__resizer">
+    <textarea class="mdc-text-field__input" rows="8" cols="40" aria-label={label} oninput={valueChanged}
+    {name}></textarea>
+  </span>
 </label>
