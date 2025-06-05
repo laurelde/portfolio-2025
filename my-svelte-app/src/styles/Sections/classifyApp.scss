@@ -69,7 +69,14 @@
 .wireframes {
 	padding: 5px 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  @include screen-s {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include screen-l {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 #Prototype482 {
