@@ -14,9 +14,15 @@
     
 
   onMount(async() => {
- console.log("DOM COntent Loaded, applying animations...");
-// Use Intersection Observer to determine if objects are within the viewport
-  const observer = new IntersectionObserver(entries => {
+    // check if URL has hash
+    if (window.location.hash) {
+      // If it does, scroll to the element with that ID
+      showLoader = false;
+    }
+
+    console.log("DOM COntent Loaded, applying animations...");
+    // Use Intersection Observer to determine if objects are within the viewport
+    const observer = new IntersectionObserver(entries => {
 
     console.log("Intersection Observer triggered, checking entries...", entries);
     entries.forEach(entry => {

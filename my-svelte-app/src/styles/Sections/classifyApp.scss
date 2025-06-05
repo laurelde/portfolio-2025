@@ -1,0 +1,100 @@
+@use "../Shared/variables" as v;
+@use "../Shared/mixins" as *;
+
+.classify-app {
+  padding: 100px 60px 0 60px;
+
+
+.project {
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+  h2 {
+    padding: 20px 10%;
+    color: #285d6d;
+  }
+  
+  p {
+    padding: 5px 10%;
+  }
+  
+   img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    padding: 20px 10px;
+  }
+  
+  .left-block {
+    margin-left: 10%;
+    margin-right: auto;
+  }
+  
+  .right-block {
+    margin-right: 10%;
+    margin-left: auto;
+  }
+  
+  .left-block .bottom-image {
+    padding-bottom: 30px;
+  }
+  
+  .list-items {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 200;
+    font-size: 16pt;
+  }
+  
+  li {
+    padding: 0 20%;
+    list-style: inside disc;
+  }
+}
+
+.projectType {
+	margin: 110px 0 50px 0;
+	text-align: center;
+	font-size: 35pt;
+}
+
+.icon {
+	max-width: 50px;
+	max-height: 50px;
+	padding: 2%;
+}
+
+
+/* Classify Page */
+
+.wireframes {
+	padding: 5px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#Prototype482 {
+	display: block;
+	margin: 0 auto;
+}
+
+iframe {
+	max-width: 100%; 
+	height: auto;
+}
+
+.navbar-bottom li {
+	margin: 0 6px;
+}
+
+.row-right, .row-left {
+max-height: 200px;
+}
+
+.row-right {
+padding-right: 15px;
+}
+
+.row-left {
+padding-left: 15px;
+}
+}

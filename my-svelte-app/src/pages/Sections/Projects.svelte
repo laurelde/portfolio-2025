@@ -21,7 +21,7 @@
   [
     {
       "projectName": "Classify App",
-      "websiteLink": polaris_report,
+      "websiteLink": "/#/sections/classify",
       "projectType": "UX Design",
       "images" : [
         classify_img1,
@@ -133,6 +133,17 @@
         description={projectData[0].description}
         tools={projectData[0].tools}
       >
+      {#snippet links()}
+  <ul>
+    <li class="icon--social-media">
+      <a href={projectData[0].websiteLink} aria-label="Classify App Case Study" target="_blank" class="material-icon-link"
+        >
+      <span class="material-symbols-outlined">
+        arrow_circle_right
+        </span></a>
+    </li>
+  </ul>
+  {/snippet}
       {#snippet images()}
         <div class="project-images project-images--app">
           {#each projectData[0].images as image}
