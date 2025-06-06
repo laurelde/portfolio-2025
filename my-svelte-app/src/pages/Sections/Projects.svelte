@@ -102,6 +102,7 @@
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         role="img"
+        aria-label="GitHub link for Fetch App"
         viewBox="0 0 24 24"
         fill="none"
         stroke="white"

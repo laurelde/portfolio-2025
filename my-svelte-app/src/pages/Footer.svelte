@@ -14,6 +14,7 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           role="img"
+          aria-label="LinkedIn icon"
           viewBox="0 0 24 24"
           fill="none"
           stroke="#000"
@@ -39,6 +40,7 @@
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           role="img"
+          aria-label="GitHub icon"
           viewBox="0 0 24 24"
           fill="none"
           stroke="black"
