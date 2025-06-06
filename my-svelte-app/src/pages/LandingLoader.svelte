@@ -78,7 +78,7 @@
         <path d="M68.4092 19.001V50.998L38 67.168L7.59082 50.998V19.001L38 2.83105L68.4092 19.001Z" stroke="#E6D4FF" stroke-width="5" shape-rendering="crispEdges"/>
         <path  d="M68.4092 19.001V50.998L38 67.168L7.59082 50.998V19.001L38 2.83105L68.4092 19.001Z" stroke="#E6D4FF" stroke-width="5" shape-rendering="crispEdges"/>
       </g>
-        <defs>
+        <!-- <defs>
           <filter id="filter0_d_10_32" x="1.09106" y="0" width="73.8179" height="78" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
@@ -89,6 +89,6 @@
             <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_10_32"/>
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_10_32" result="shape"/>
           </filter>
-        </defs>
+        </defs> -->
       </svg>
 </div>
