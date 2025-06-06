@@ -14,6 +14,10 @@
   animation-delay: 4s;
   animation-duration: 1s;
 
+  svg, path, g {
+    background: transparent;
+  }
+
   .animate {
     width: 100vw;
     height: 150px;
